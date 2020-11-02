@@ -14,8 +14,8 @@ function oisst_monthly_average
 
 years = [1982 2019]; % Years to average]
 bpath = '/Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/';
-dirin = [bpath 'downloaded_data'];
-dirout = [bpath 'monthly_avg_data'];
+dirin = [bpath 'downloaded_data/'];
+dirout = [bpath 'monthly_avg_data/'];
 
 % ========================================
 % LOAD DATA AND COMPUTE MONTHLY MEANS
