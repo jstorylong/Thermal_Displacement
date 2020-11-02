@@ -17,7 +17,7 @@ function oisst_an_cmip_future(rcp)
 % SET KEY PARAMETERS
 % ========================================
 clim_years = [1982 2011]; % Range of years to use for climatology
-dirout = '~/Dropbox/MHW/Data'; % output directory
+dirout = '/Users/jlong/Documents/Data/Jacox_2020_MHW/'; % output directory
 
 % ========================================
 % LOAD SST DATA AND ICE MASK
@@ -25,7 +25,7 @@ dirout = '~/Dropbox/MHW/Data'; % output directory
 fprintf('\nLoading OISST data\n')
 
 % Load OISST
-load ~/Dropbox/MHW/Data/oisst_an_1982-2019 sst year month lon lat lsm
+load /Users/jlong/Documents/Data/Jacox_2020_MHW/oisst_an_1982-2019 sst year month lon lat lsm
 lon_oisst = lon;
 lat_oisst = lat;
 
@@ -35,8 +35,8 @@ lat_oisst = lat;
 fprintf('Applying CMIP5 SST change\n')
 
 % Load CMIP5 output
-f_cmip_his = sprintf('~/Dropbox/MHW/Data/sst.CMIP5.ENSMN.hist-rcp%d.mon.clim.1982-2011.nc',rcp);
-f_cmip_fut = sprintf('~/Dropbox/MHW/Data/sst.CMIP5.ENSMN.rcp%d.mon.clim.2070-2099.nc',rcp);
+f_cmip_his = sprintf('/Users/jlong/Documents/Data/Jacox_2020_MHW/sst.CMIP5.ENSMN.hist-rcp%d.mon.clim.1982-2011.nc',rcp);
+f_cmip_fut = sprintf('/Users/jlong/Documents/Data/Jacox_2020_MHW/sst.CMIP5.ENSMN.rcp%d.mon.clim.2070-2099.nc',rcp);
 lon_cmip = ncread(f_cmip_his,'lon');
 lat_cmip = ncread(f_cmip_his,'lat');
 sst_cmip_his = ncread(f_cmip_his,'sst');

@@ -23,7 +23,7 @@ function thermal_displacement(threshold,period,is_detrend,ilims,jlims,rcp)
 % ====================================================
 
 % Data directory
-dir = '~/Dropbox/MHW/Data';
+dir = '/Users/jlong/Documents/Data/Jacox_2020_MHW/';
 
 % Set maximum displacement at distance greater than the largest calculated
 % displacements

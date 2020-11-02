@@ -8,16 +8,21 @@ function oisst_monthly_average
 % ========================================
 % SET PARAMETERS
 % ========================================
-years = [1982 2019]; % Years to average
-dirin = '~/Documents/Data/OISST/OISST_25km_daily/sst';
-dirout = '~/Documents/Data/OISST/OISST_25km_monthly';
+%
+% Updated 28 2020 by Jacki Long (MBARI)
+% Pulls data from shared MBGC Atlas Drive
+
+years = [1982 2019]; % Years to average]
+bpath = '/Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/';
+dirin = [bpath 'downloaded_data'];
+dirout = [bpath 'monthly_avg_data'];
 
 % ========================================
 % LOAD DATA AND COMPUTE MONTHLY MEANS
 % ========================================
 ii = 1; % Counter
-for iy = years(1):years(2);
-    
+for iy = years(1):years(2)
+
     % Update status
     fprintf('Loading %d\n',iy)
     
@@ -53,7 +58,7 @@ sst_mon(abs(sst_mon)>100) = nan;
 
 % Load land/sea mask
 % Change from land=0 sea=1 to land=1 sea=0
-lsm = ncread('~/Documents/Data/OISST/lsmask.oisst.v2.nc','lsmask');
+lsm = ncread([dirin 'lsmask.oisst.v2.nc'],'lsmask');
 lsm = -lsm + 1;
 
 % ========================================

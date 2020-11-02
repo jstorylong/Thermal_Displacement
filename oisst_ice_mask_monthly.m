@@ -6,8 +6,9 @@ function oisst_ice_mask_monthly
 % =============================
 
 % Input and output file directories
-dirin = '~/Documents/Data/OISST/OISST_25km_daily/ice';
-dirout = '~/Documents/Data/OISST/OISST_25km_monthly';
+bpath = '/Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/';
+dirin = [bpath 'downloaded_data/'];
+dirout = [bpath 'monthly_avg_data/'];
 
 % Number of ice days in a month to classify as sea ice
 ndays_ice = 15;
