@@ -16,7 +16,7 @@ function define_heatwaves(threshold,period,is_detrend,rcp)
 % ============================================
 
 % Output directory
-dirout = '/Users/jlong/Documents/Data/Jacox_2020_MHW/';
+dirout = '/Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/';
 
 % ========================================
 % DEFINE HEATWAVES

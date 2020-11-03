@@ -10,9 +10,9 @@ function oisst_an
 % ========================================
 years = [1982 2019]; % Range of years to be analyzed
 clim_years = [1982 2011]; % Range of years to use for climatology
-bpath = '/Users/Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/';
+bpath = '/Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/';
 
-dirout = '/Users/jlong/Documents/Data/Jacox_2020_MHW/'; % output directory
+dirout = [bpath]; % output directory
 
 % ========================================
 % LOAD SST DATA AND ICE MASK
@@ -20,10 +20,10 @@ dirout = '/Users/jlong/Documents/Data/Jacox_2020_MHW/'; % output directory
 fprintf('\nLoading OISST data\n')
 
 % Load OISST
-load /Users/Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/monthly_avg_data/OISST_25km_monthly_1982-2019 year month lat lon lsm sst
+load /Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/monthly_avg_data/OISST_25km_monthly_1982-2019 year month lat lon lsm sst
 
 % Load ice mask
-load /Users/Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/monthly_avg_data/oisst_25km_monthly_ice_mask_1982-2019 ice_mask
+load /Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/monthly_avg_data/oisst_25km_monthly_ice_mask_1982-2019 ice_mask
 
 % Constrain to specified years
 ind = find(year>=years(1) & year<=years(2));

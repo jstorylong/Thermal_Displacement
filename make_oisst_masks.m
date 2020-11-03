@@ -14,7 +14,7 @@ function make_oisst_masks
 % ===================================
 
 % Output file
-bpath = '/Users/Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/';
+bpath = '/Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/';
 fout = [bpath '/oisst_masks'];
 
 fprintf('\nMaking regional masks...\n')
@@ -22,7 +22,7 @@ fprintf('\nMaking regional masks...\n')
 % Load land and ice masks
 lsm = ncread([bpath 'downloaded_data/lsmask.oisst.v2.nc'],'lsmask');
 lsm = -lsm + 1; % Swap 0/1 for land/sea
-load /Users/Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/monthly_avg_data/oisst_25km_monthly_ice_mask_1982-2019 lon lat ice_mask
+load /Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/monthly_avg_data/oisst_25km_monthly_ice_mask_1982-2019 lon lat ice_mask
 
 % Make mask
 [nx,ny] = size(lsm);

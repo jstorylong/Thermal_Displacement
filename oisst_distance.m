@@ -8,11 +8,11 @@ function oisst_distance
 % =====================================
 
 % Set output file
-bpath = '/Users/Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/';
-fout = [bpath '/oisst_distance'];
+bpath = '/Volumes/MBGC_Lab/Data/OISSTv2_1_daily/Jacox_2020/';
+fout = [bpath '/oisst_distance/'];
 
 % Load oisst lat/lon grid
-f_grid = [bpath '/downloaded_data/lsmask.oisst.v2.nc';
+f_grid = [bpath '/downloaded_data/lsmask.oisst.v2.nc'];
 lon = double(ncread(f_grid,'lon'));
 lat = double(ncread(f_grid,'lat'));
 
